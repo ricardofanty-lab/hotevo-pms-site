@@ -1,0 +1,16 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Local editor / AI Studio working data
+.aistudio/
+
+# Unused generated previews and media
+public/contact-sheet-32.png
+public/liquid-glass.html
+public/assets/aistudio/mz-digital-clouds-175_71cd4ea3.mp3

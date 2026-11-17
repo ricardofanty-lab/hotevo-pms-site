@@ -1,0 +1,181 @@
+@import "tailwindcss";
+
+:root {
+  /* Apple Storekit (SK) Canonical Tokens */
+  --sk-button-background: #0071e3;
+  --sk-button-background-hover: #0077ed;
+  --sk-button-background-active: #006edb;
+  --sk-button-color: #ffffff;
+  --sk-button-border-radius: 9999px;
+
+  --sk-headline-text-color: #1d1d1f;
+  --sk-body-background-color: #ffffff;
+  --sk-body-text-color: #1d1d1f;
+  --sk-body-link-color: #0066cc;
+  --sk-focus-color: #0071e3;
+
+  --sk-neutral: #86868b;
+  --sk-text-muted: #6e6e73;
+  --sk-border: #d2d2d7;
+  --sk-card-bg: #f5f5f7;
+  --sk-card-radius: 18px;
+  --sk-input-radius: 12px;
+
+  --sk-error: #b64400;
+  --sk-success: #0066cc;
+  --sk-accent-orange: #ff791b;
+  --sk-accent-orange-deep: #b64400;
+  --sk-neutral-dark: #424245;
+
+  --sk-display-font-stack: "SF Pro Display", "SF Pro Icons", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --sk-body-font-stack: "SF Pro Text", "SF Pro Icons", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --sk-mono-font-stack: "SF Mono", Menlo, Monaco, Consolas, monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--sk-body-font-stack);
+    background-color: var(--sk-body-background-color);
+    color: var(--sk-body-text-color);
+    scroll-behavior: smooth;
+    scroll-padding-top: 1.5rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--sk-display-font-stack);
+    text-wrap: balance;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--sk-focus-color);
+    outline-offset: 2px;
+  }
+}
+
+/* SK Typography & Button Utilities */
+.sk-h1 {
+  font-family: var(--sk-display-font-stack);
+  font-weight: 600;
+  line-height: 1.0834933333;
+  letter-spacing: -0.003em;
+}
+
+.sk-h2 {
+  font-family: var(--sk-display-font-stack);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: 0em;
+}
+
+.sk-h3 {
+  font-family: var(--sk-display-font-stack);
+  font-weight: 600;
+  line-height: 1.125;
+  letter-spacing: 0.004em;
+}
+
+.sk-h4 {
+  font-family: var(--sk-display-font-stack);
+  font-weight: 600;
+  line-height: 1.1666666667;
+  letter-spacing: 0.009em;
+}
+
+.sk-body-lg {
+  font-family: var(--sk-body-font-stack);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.1764805882;
+  letter-spacing: -0.022em;
+}
+
+.sk-body-md {
+  font-family: var(--sk-body-font-stack);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4285914286;
+  letter-spacing: -0.016em;
+}
+
+.sk-body-sm {
+  font-family: var(--sk-body-font-stack);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.3333733333;
+  letter-spacing: -0.01em;
+}
+
+.sk-button-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--sk-button-background);
+  color: var(--sk-button-color);
+  border-radius: var(--sk-button-border-radius);
+  font-family: var(--sk-body-font-stack);
+  font-weight: 400;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background-color 150ms ease, transform 150ms ease;
+}
+
+.sk-button-primary:hover {
+  background-color: var(--sk-button-background-hover);
+}
+
+.sk-button-primary:active {
+  background-color: var(--sk-button-background-active);
+  transform: scale(0.985);
+}
+
+.sk-button-primary:focus-visible {
+  outline: 2px solid var(--sk-focus-color);
+  outline-offset: 2px;
+}
+
+.sk-button-reduced {
+  font-size: 12px;
+  line-height: 1.3333733333;
+  letter-spacing: -0.01em;
+  padding: 4px 11px;
+}
+
+.sk-button-default {
+  font-size: 17px;
+  line-height: 1.1764805882;
+  letter-spacing: -0.022em;
+  padding: 9px 16px;
+}
+
+.sk-button-elevated {
+  font-size: 17px;
+  line-height: 1.1764805882;
+  letter-spacing: -0.022em;
+  padding: 12px 22px;
+}
+
+.sk-button-super {
+  font-size: 17px;
+  line-height: 1.1764805882;
+  letter-spacing: -0.022em;
+  padding: 18px 31px;
+}
